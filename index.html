@@ -1,1 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SourceChat — chat with your documents</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <h1>📚 SourceChat</h1>
+      <button id="uploadBtn" class="upload-btn">＋ Upload sources</button>
+      <input type="file" id="fileInput" multiple accept=".pdf,.txt,.md" hidden />
+      <ul id="sourceList" class="source-list"></ul>
+      <p class="sidebar-note">v1 keeps sources in your browser session only — refresh starts a new chat.</p>
+    </aside>
 
+    <main class="chat">
+      <div id="messages" class="messages">
+        <div class="empty-state">Upload a PDF or text file, then ask a question about it.</div>
+      </div>
+      <form id="chatForm" class="composer">
+        <input id="chatInput" type="text" placeholder="Ask about your sources…" autocomplete="off" />
+        <button type="submit">Send</button>
+      </form>
+    </main>
+  </div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
